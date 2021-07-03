@@ -4,7 +4,6 @@ import ae.smartdubai.assessment.bookstore.models.entities.Author;
 import ae.smartdubai.assessment.bookstore.models.entities.Book;
 import ae.smartdubai.assessment.bookstore.models.entities.BookType;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;

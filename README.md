@@ -6,7 +6,7 @@
 * Spring Data JPA
 * Spring Data REST
 * Springdoc Open API
-  Springdoc Open API Data rest
+*  Springdoc Open API Data rest
   
 **Database**: H2 (file based, in-memory for junits)
 
