@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenAPI definition",
-    "version": "v0"
+    "title": "Bookstore API Definition",
+    "version": "v1"
   },
   "servers": [
     {
@@ -1706,7 +1706,7 @@
         }
       }
     },
-    "/api/order/checkout": {
+    "/api/v1/order/checkout": {
       "post": {
         "tags": [
           "order-controller"
@@ -1746,7 +1746,7 @@
           "$ref": "#/components/schemas/Link"
         }
       },
-      "EntityModelBook": {
+      "EntityModelBookType": {
         "type": "object",
         "properties": {
           "name": {
@@ -1755,12 +1755,9 @@
           "description": {
             "type": "string"
           },
-          "price": {
+          "discountRate": {
             "type": "number",
             "format": "double"
-          },
-          "isbn": {
-            "type": "string"
           },
           "_links": {
             "$ref": "#/components/schemas/Links"
@@ -1788,6 +1785,49 @@
           }
         }
       },
+      "PagedModelEntityModelBookType": {
+        "type": "object",
+        "properties": {
+          "_embedded": {
+            "type": "object",
+            "properties": {
+              "bookTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EntityModelBookType"
+                }
+              }
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          },
+          "page": {
+            "$ref": "#/components/schemas/PageMetadata"
+          }
+        }
+      },
+      "EntityModelBook": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "isbn": {
+            "type": "string"
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        }
+      },
       "PagedModelEntityModelBook": {
         "type": "object",
         "properties": {
@@ -1807,24 +1847,6 @@
           },
           "page": {
             "$ref": "#/components/schemas/PageMetadata"
-          }
-        }
-      },
-      "EntityModelBookType": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "discountRate": {
-            "type": "number",
-            "format": "double"
-          },
-          "_links": {
-            "$ref": "#/components/schemas/Links"
           }
         }
       },
@@ -1908,28 +1930,6 @@
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/EntityModelAuthor"
-                }
-              }
-            }
-          },
-          "_links": {
-            "$ref": "#/components/schemas/Links"
-          },
-          "page": {
-            "$ref": "#/components/schemas/PageMetadata"
-          }
-        }
-      },
-      "PagedModelEntityModelBookType": {
-        "type": "object",
-        "properties": {
-          "_embedded": {
-            "type": "object",
-            "properties": {
-              "bookTypes": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/EntityModelBookType"
                 }
               }
             }
