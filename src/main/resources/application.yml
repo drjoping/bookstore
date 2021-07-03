@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sd-bookstore
+  profiles:
+    include:
+      - db
+  data:
+    rest:
+      base-path: /api/data/
+      return-body-on-create: true
+      return-body-on-update: true
+  h2:
+    console:
+      enabled: true
+app:
+  load-mock-data: true
