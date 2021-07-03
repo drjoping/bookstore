@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 @Configuration
 @RequiredArgsConstructor
 public class RepositoryRestCustomConfiguration implements RepositoryRestConfigurer {
-	@SneakyThrows
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
 		config.exposeIdsFor(Book.class, BookType.class, Author.class);
