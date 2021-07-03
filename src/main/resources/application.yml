@@ -12,5 +12,8 @@ spring:
   h2:
     console:
       enabled: true
+springdoc:
+  paths-to-exclude: /api/data/profile/**
+
 app:
   load-mock-data: true
