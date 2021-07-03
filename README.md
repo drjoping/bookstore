@@ -13,17 +13,17 @@
 
 ## Steps to Run
 ### Local 
-Run these commends in terminal
+Run these commands in terminal
 
 ```
-mvn packge
+mvn package
 java -jar target/sd-bookstore-1.0.0.jar
 ```
 
 ### Docker
 1) Build Image:
 ```
-mvn packge
+mvn package
 docker build -t sd-bookstore:1.0.0 .
 ```
 2) Run Container:
