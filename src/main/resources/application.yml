@@ -9,11 +9,7 @@ spring:
       base-path: /api/data/
       return-body-on-create: true
       return-body-on-update: true
-  h2:
-    console:
-      enabled: true
 springdoc:
   paths-to-exclude: /api/data/profile/**
-
 app:
   load-mock-data: true
