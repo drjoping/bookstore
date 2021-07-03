@@ -36,7 +36,7 @@ class OrderControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		mockEndpoint = "http://localhost:" + port + "/api";
+		mockEndpoint = "http://localhost:" + port + "/api/v1";
 		sampleBook = bookRepo.findFirstByName("X-Men");
 	}
 
