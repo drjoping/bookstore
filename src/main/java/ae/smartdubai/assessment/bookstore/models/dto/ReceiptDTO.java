@@ -17,6 +17,5 @@ import java.util.List;
 public class ReceiptDTO {
 	private String orderId;
 	private OrderStatus orderStatus;
-	private List<BookDTO> books;
 	private double totalAmount;
 }
